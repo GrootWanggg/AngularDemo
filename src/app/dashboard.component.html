@@ -6,5 +6,7 @@
     </div>
   </a>
   <button [disabled]="isUnchanged">lallala</button>
+  <div (click)="changeNum()">{{state.test}}</div>
+  <child-Component (onVoted)="onVoted()" [name]="childName" ></child-Component>
 </div>
 <hero-search></hero-search>
