@@ -17,22 +17,28 @@
 <div [ngSwitch]="hero?.name">
   <ng-template [ngSwitchCase]="'wangshilei'">
     <ng-container *ngIf="ifShow">
-      <div >wangshilei</div>
+      <div>wangshilei</div>
     </ng-container>
   </ng-template>
   <ng-template [ngSwitchCase]="'wangshilei1'">
-    <div >wangshilei1</div>
+    <div>wangshilei1</div>
   </ng-template>
   <ng-template [ngSwitchCase]="'wangshilei2'">
     <div>wangshilei2</div>
   </ng-template>
   <ng-template ngSwitchDefault>
-    <div >wangshilei3</div>
+    <div>wangshilei3</div>
   </ng-template>
 </div>
 <div>
-  <input  #box (keyup.enter)="onKey(box.value)">
-  <p>{{message}}</p>
+  <input
+    #box
+    (keyup.enter)="onKey(box.value)"
+    (blur)="onKey(box.value)">
+  <ul *ngFor="let msg of message">
+    <li>{{msg}}</li>
+  </ul>
+
 </div>
 </body>
 </html>

@@ -14,7 +14,7 @@ export class Highlight implements OnInit {
   color: string;
   hero: Hero;
   ifShow: boolean;
-  message: string = '请再输入框输入信息！';
+  message = ['请再输入框输入信息！'];
 
   ngOnInit() {
     this.hero = {
@@ -26,6 +26,6 @@ export class Highlight implements OnInit {
   }
 
   onKey(event: any) {
-    event === '' ? this.message = '请再输入框输入信息！' : this.message = event;
+    this.message.push(event)
   }
 }
