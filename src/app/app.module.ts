@@ -21,6 +21,8 @@ import { ChildComponent }  from './childComponent';
 import { CountdownTimerComponent }  from './CountdownTimerComponent';
 import { Highlight }  from './DirectiveTest/highlight-component';
 import { HighlightDirective }  from './DirectiveTest/highlight.directive';
+import { LoginComponent }  from './Form/loginComponent';
+import { Login }  from './Form/login';
 
 @NgModule({
   imports: [
@@ -40,7 +42,9 @@ import { HighlightDirective }  from './DirectiveTest/highlight.directive';
     ChildComponent,
     CountdownTimerComponent,
     Highlight,
-    HighlightDirective
+    HighlightDirective,
+    LoginComponent,
+    Login
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
