@@ -16,6 +16,9 @@ import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroService }          from './hero.service';
 import { HeroSearchComponent }  from './hero-search.component';
 import { ChildComponent }  from './childComponent';
+import { CountdownTimerComponent }  from './CountdownTimerComponent';
+import { Highlight }  from './DirectiveTest/highlight-component';
+import { HighlightDirective }  from './DirectiveTest/highlight.directive';
 
 @NgModule({
   imports: [
@@ -31,7 +34,10 @@ import { ChildComponent }  from './childComponent';
     HeroDetailComponent,
     HeroesComponent,
     HeroSearchComponent,
-    ChildComponent
+    ChildComponent,
+    CountdownTimerComponent,
+    Highlight,
+    HighlightDirective
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]

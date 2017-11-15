@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-$END$
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>
+<div [ngSwitch]="hero?.name">
+  <ng-template [ngSwitchCase]="'wangshilei'">
+    <div >wangshilei</div>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'wangshilei1'">
+    <div >wangshilei1</div>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'wangshilei2'">
+    <div>wangshilei2</div>
+  </ng-template>
+  <ng-template ngSwitchDefault>
+    <div >wangshilei3</div>
+  </ng-template>
+</div>
 </body>
 </html>
