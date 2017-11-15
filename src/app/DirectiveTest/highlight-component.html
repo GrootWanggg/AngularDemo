@@ -16,7 +16,9 @@
 <p [appHighlight]="color">Highlight me!</p>
 <div [ngSwitch]="hero?.name">
   <ng-template [ngSwitchCase]="'wangshilei'">
-    <div >wangshilei</div>
+    <ng-container *ngIf="ifShow">
+      <div >wangshilei</div>
+    </ng-container>
   </ng-template>
   <ng-template [ngSwitchCase]="'wangshilei1'">
     <div >wangshilei1</div>
@@ -27,6 +29,10 @@
   <ng-template ngSwitchDefault>
     <div >wangshilei3</div>
   </ng-template>
+</div>
+<div>
+  <input  #box (keyup.enter)="onKey(box.value)">
+  <p>{{message}}</p>
 </div>
 </body>
 </html>
